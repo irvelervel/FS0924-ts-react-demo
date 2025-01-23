@@ -6,6 +6,8 @@ import ClassComponent from './components/ClassComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PageChooser from './components/PageChooser'
 import NotFound from './components/NotFound'
+import FetchComponent from './components/FetchComponent'
+import MovieGallery from './components/MovieGallery'
 
 function App() {
   return (
@@ -29,7 +31,8 @@ function App() {
             element={<FuncComponent title="TITOLO 2" counter={10} />}
           />
           <Route path="/form" element={<FormExample />} />
-          <Route path="/fetch" element={<></>} />
+          <Route path="/fetch" element={<FetchComponent />} />
+          <Route path="/movie-gallery" element={<MovieGallery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
